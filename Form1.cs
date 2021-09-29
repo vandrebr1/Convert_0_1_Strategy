@@ -2,13 +2,6 @@
 using Convert_0_1_Strategy.Factory;
 using Convert_0_1_Strategy.Interface;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Convert_0_1_Strategy
@@ -37,12 +30,9 @@ namespace Convert_0_1_Strategy
 
                 if (bit != null)
                 {
-                    resultado =  bit.Inverter() + resultado;
+                    resultado += bit.Inverter();
                 }
-                else
-                {
-                    resultado += " ";
-                }
+
             }
             AddTextRitch("###############################");
             AddTextRitch("Texto Alterado:");
@@ -51,7 +41,7 @@ namespace Convert_0_1_Strategy
 
         private void AddTextRitch(string saida)
         {
-            rtbSaida.AppendText("\r\n" + saida);
+            rtbSaida.AppendText(saida + "\r\n");
             rtbSaida.ScrollToCaret();
         }
     }
